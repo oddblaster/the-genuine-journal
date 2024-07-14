@@ -372,7 +372,7 @@ export function Home() {
               <CardHeader className="flex items-center justify-between">
                 <h3 className="text-lg font-medium">Join the Community</h3>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="px-6 pb-6">
                 <p className="text-muted-foreground mb-4">
                   Sign up to stay up-to-date with the latest stories and connect
                   with other independent journalists.
