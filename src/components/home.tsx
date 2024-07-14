@@ -21,7 +21,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Input } from "./ui/input";
 
 export function Home() {
   return (
@@ -30,7 +31,7 @@ export function Home() {
         <div className="container flex h-14 items-center justify-between gap-4 px-4 sm:px-6 md:px-8 mx-auto">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <NewspaperIcon className="h-6 w-6" />
-            <span className="text-lg font-semibold">Indie News</span>
+            <span className="text-lg font-semibold">The Genuine Journal</span>
           </Link>
           <nav className="hidden ml-1 gap-4 md:flex">
             <Link
@@ -367,12 +368,31 @@ export function Home() {
                 </Link>
               </div>
             </div>
+            <Card className="space-y-4">
+              <CardHeader className="flex items-center justify-between">
+                <h3 className="text-lg font-medium">Join the Community</h3>
+              </CardHeader>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground mb-4">
+                  Sign up to stay up-to-date with the latest stories and connect
+                  with other independent journalists.
+                </p>
+                <form className="space-y-4">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full"
+                  />
+                  <Button className="w-full">Join Now</Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </main>
       <footer className="bg-muted py-6 text-center text-sm text-muted-foreground">
-        <div className="container">
-          &copy; 2024 Indie News. All rights reserved.
+        <div className="container mx-auto">
+          &copy; 2024 The Genuine Journal. All rights reserved.
         </div>
       </footer>
     </div>
