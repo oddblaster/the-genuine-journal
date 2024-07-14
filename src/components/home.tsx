@@ -99,7 +99,7 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent p-6 sm:p-8">
                 <div className="flex h-full flex-col justify-end">
                   <div>
-                    <div className="inline-block rounded-full bg-muted px-3 py-1 text-xs font-medium">
+                    <div className="inline-block bg-primary px-3 py-1 text-xs font-medium text-secondary" style={{ borderRadius: "999px"}}>
                       Featured
                     </div>
                   </div>
