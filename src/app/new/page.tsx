@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
-
 import { createClient } from '@/utils/supabase/server'
+import CreateArticle from './createArticle'
 
 export default async function PrivatePage() {
   const supabase = createClient()
@@ -10,5 +10,7 @@ export default async function PrivatePage() {
     redirect('/')
   }
 
-  return <p>Hello {data.user.email}</p>
+  return (
+    <CreateArticle />
+  )
 }
