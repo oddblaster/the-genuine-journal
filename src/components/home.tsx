@@ -23,6 +23,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "./ui/input";
+import { login } from "@/app/actions";
 
 export function Home() {
   return (
@@ -99,7 +100,10 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent p-6 sm:p-8">
                 <div className="flex h-full flex-col justify-end">
                   <div>
-                    <div className="inline-block bg-primary px-3 py-1 text-xs font-medium text-secondary" style={{ borderRadius: "999px"}}>
+                    <div
+                      className="inline-block bg-primary px-3 py-1 text-xs font-medium text-secondary"
+                      style={{ borderRadius: "999px" }}
+                    >
                       Featured
                     </div>
                   </div>
@@ -382,8 +386,10 @@ export function Home() {
                     type="email"
                     placeholder="Enter your email"
                     className="w-full"
+                    id="email"
+                    name="email"
                   />
-                  <Button className="w-full">Join Now</Button>
+                  <Button formAction={login} className="w-full">Join Now</Button>
                 </form>
               </CardContent>
             </Card>
@@ -399,7 +405,7 @@ export function Home() {
   );
 }
 
-function MenuIcon(props) {
+function MenuIcon(props: any) {
   return (
     <svg
       {...props}
@@ -420,7 +426,7 @@ function MenuIcon(props) {
   );
 }
 
-function NewspaperIcon(props) {
+function NewspaperIcon(props: any) {
   return (
     <svg
       {...props}
@@ -442,7 +448,7 @@ function NewspaperIcon(props) {
   );
 }
 
-function ThumbsDownIcon(props) {
+function ThumbsDownIcon(props: any) {
   return (
     <svg
       {...props}
@@ -462,7 +468,7 @@ function ThumbsDownIcon(props) {
   );
 }
 
-function ThumbsUpIcon(props) {
+function ThumbsUpIcon(props: any) {
   return (
     <svg
       {...props}
@@ -482,7 +488,7 @@ function ThumbsUpIcon(props) {
   );
 }
 
-function XIcon(props) {
+function XIcon(props: any) {
   return (
     <svg
       {...props}
